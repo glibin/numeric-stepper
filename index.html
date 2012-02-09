@@ -33,7 +33,7 @@
             margin-left: auto;
             margin-right: auto;
 
-            margin-top: 40px;
+            margin-top: 0;
 
             position: relative;
 
@@ -57,20 +57,42 @@
         body {
             background: #6E6E6E url(img/bg.png) repeat;
             font-family: 'LeagueGothicRegular', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .orange-top {
+            height: 20px;
+            background: #F95C33;
+        }
+
+        .black-top {
+            padding: 40px;
+            background: #000000;
         }
 
         h1, h2 {
             color: white;
             font-weight: normal;
-            text-shadow: 0px 2px 0px #4d4d4d;
         }
 
         h1 {
-            font-size: 54px;
+            font-size: 48px;
+            font-weight: normal;
+            padding:0;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        .author {
+            color: white;
+            font-style: italic;
+            letter-spacing: 0.1em;
         }
 
         h2 {
             margin-top: 30px;
+            text-shadow: 0px 2px 0px #4d4d4d;
         }
         
         p {
@@ -127,7 +149,12 @@
 
 <body>
     <div class="container">
-        <h1>Hello, world</h1>
+        <div class="orange-top"></div>
+        <div class="black-top">
+            <span class="author">MIKE TANSKY'S</span>
+            <h1>NUMERIC STEPPER.</h1>
+        </div>
+
     </div>
 
 </body>
