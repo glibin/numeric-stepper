@@ -11,9 +11,11 @@
     <![endif]-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="assets/js/slider.js"></script>
+    <script src="http://glibin.github.com/slider/assets/js/slider.js"></script>
+    <script src="assets/js/numeric-stepper.js"></script>
 
-    <link href="assets/css/slider/default.css" rel="stylesheet">
+    <link href="http://glibin.github.com/slider/assets/css/slider/default.css" rel="stylesheet">
+    <link href="assets/css/numeric-stepper/default.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
 
     <style type="text/css">
@@ -137,19 +139,20 @@
             margin-top: 50px;
             font-family: sans-serif;
         }
+
+        .stepper-container {
+            font-family: 'LeagueGothicRegular', sans-serif;
+        }
     </style>
 
     <script>
-        /*jQuery(function(){
-            jQuery('.slider-container').slider({
-                'min' : 0,
-                'max' : 100,
-                'pos' : 40,
+        jQuery(function(){
+            jQuery('.stepper-container').numericStepper({
                 'change' : function(pos) {
                     // Event on change
                 }
             });
-        });*/
+        });
     </script>
 
 </head>
@@ -164,7 +167,7 @@
     </div>
 
     <div class="container">
-
+        <p><div class="stepper-container"></div></p>
     </div>
 
 </body>
