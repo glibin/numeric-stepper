@@ -1,0 +1,119 @@
+@font-size: 48px;
+@height: 72px;
+@width: 272px;
+@borderRadius: 15px;
+@borderThin: 4px;
+@border: ~"@{borderThin}px solid black";
+@buttonWidth: @height;
+
+
+@color: black;
+@bgColor: #D9D9D9;
+
+@buttonColor: white;
+@buttonBgColorStart: #F85B25;
+@buttonBgColorEnd: #F84421;
+
+.border-radius (@radius) {
+            border-radius: @radius;
+       -moz-border-radius: @radius;
+    -webkit-border-radius: @radius;
+         -o-border-radius: @radius;
+            border-radius: @radius;
+}
+
+.border-radius-top-left (@radius) {
+    -webkit-border-top-left-radius: @radius;
+        -moz-border-radius-topleft: @radius;
+            border-top-left-radius: @radius;
+}
+
+.border-radius-top-right (@radius) {
+    -webkit-border-top-right-radius: @radius;
+        -moz-border-radius-topright: @radius;
+            border-top-right-radius: @radius;
+}
+
+.border-radius-bottom-left (@radius) {
+    -webkit-border-bottom-left-radius: @radius;
+        -moz-border-radius-bottomleft: @radius;
+            border-bottom-left-radius: @radius;
+}
+
+.border-radius-bottom-right (@radius) {
+    -webkit-border-bottom-right-radius: @radius;
+        -moz-border-radius-bottomright: @radius;
+            border-bottom-right-radius: @radius;
+}
+
+.box-shadow-full (@data) {
+    -webkit-box-shadow: @data;
+       -moz-box-shadow: @data;
+         -o-box-shadow: @data;
+            box-shadow: @data;
+}
+
+.box-shadow (@x, @y, @blur, @color) {
+    -webkit-box-shadow: @x @y @blur @color;
+       -moz-box-shadow: @x @y @blur @color;
+         -o-box-shadow: @x @y @blur @color;
+            box-shadow: @x @y @blur @color;
+}
+
+.gradient (@from, @to) {
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(@from), to(@to));
+    background: -moz-linear-gradient(top, @from, @to);
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=@from, endColorStr=@to);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=@from, endColorStr=@to);
+}
+
+.stepper_button {
+    width: @buttonWidth;
+    display: block;
+    color: @buttonColor;
+    text-decoration:  none;
+
+    .gradient(@buttonBgColorStart, @buttonBgColorEnd);
+
+    .box-shadow-full(~"inset 0px 1px 0px #FBA078");
+}
+
+.numeric-stepper {
+    border: @border;
+    font-size: @font-size;
+    color: @color;
+    line-height: @height;
+
+    .border-radius(@borderRadius);
+
+    background: @bgColor;
+
+    .box-shadow-full(~"0px 1px 0px #7B7B7B");
+
+
+    width: @width;
+    text-align: center;
+}
+
+.numeric-stepper__left {
+    float: left;
+    .stepper_button;
+
+    .border-radius-top-left(@borderRadius - @borderThin);
+    .border-radius-bottom-left(@borderRadius - @borderThin);
+}
+
+.numeric-stepper__right {
+    float: right;
+    .stepper_button;
+
+    .border-radius-top-right(@borderRadius - @borderThin);
+    .border-radius-bottom-right(@borderRadius - @borderThin);
+}
+
+.numeric-stepper__body {
+    margin-left: @buttonWidth;
+    margin-right: @buttonWidth;
+
+    .box-shadow-full(~"inset 0px 1px 0px #E8E8E8, inset 15px 0px 25px #B7B7B7, inset -15px 0px 25px #B7B7B7, inset 0px -15px 25px #B7B7B7");
+}
