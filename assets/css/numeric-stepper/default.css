@@ -11,8 +11,18 @@
   -moz-box-shadow: inset 0px 1px 0px #FBA078;
   -o-box-shadow: inset 0px 1px 0px #FBA078;
   box-shadow: inset 0px 1px 0px #FBA078;
-  text-shadow: 0px -1px 1px #b34300;
+  text-shadow: 0px -1px 0px #b34300;
   filter: dropshadow(color=#b34300, offx=0px, offy=-1px);
+}
+.numeric-stepper__button:active {
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#f84421), to(#f84421));
+  background: -moz-linear-gradient(top, #f84421, #f84421);
+  -ms-filter: progid:dximagetransform.microsoft.gradient(startColorStr=#f85b25, endColorStr=#f84421);
+  filter: progid:dximagetransform.microsoft.gradient(startColorStr=#f85b25, endColorStr=#f84421);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
 }
 .numeric-stepper {
   border: 4px solid black;
@@ -46,7 +56,7 @@
   -moz-box-shadow: inset 0px 1px 0px #FBA078;
   -o-box-shadow: inset 0px 1px 0px #FBA078;
   box-shadow: inset 0px 1px 0px #FBA078;
-  text-shadow: 0px -1px 1px #b34300;
+  text-shadow: 0px -1px 0px #b34300;
   filter: dropshadow(color=#b34300, offx=0px, offy=-1px);
   -webkit-border-top-left-radius: 11px;
   -moz-border-radius-topleft: 11px;
@@ -69,7 +79,7 @@
   -moz-box-shadow: inset 0px 1px 0px #FBA078;
   -o-box-shadow: inset 0px 1px 0px #FBA078;
   box-shadow: inset 0px 1px 0px #FBA078;
-  text-shadow: 0px -1px 1px #b34300;
+  text-shadow: 0px -1px 0px #b34300;
   filter: dropshadow(color=#b34300, offx=0px, offy=-1px);
   -webkit-border-top-right-radius: 11px;
   -moz-border-radius-topright: 11px;
@@ -81,8 +91,8 @@
 .numeric-stepper__body {
   margin-left: 72px;
   margin-right: 72px;
-  -webkit-box-shadow: inset 0px 1px 0px #E8E8E8, inset 15px 0px 25px #B7B7B7, inset -15px 0px 25px #B7B7B7, inset 0px -15px 25px #B7B7B7;
-  -moz-box-shadow: inset 0px 1px 0px #E8E8E8, inset 15px 0px 25px #B7B7B7, inset -15px 0px 25px #B7B7B7, inset 0px -15px 25px #B7B7B7;
-  -o-box-shadow: inset 0px 1px 0px #E8E8E8, inset 15px 0px 25px #B7B7B7, inset -15px 0px 25px #B7B7B7, inset 0px -15px 25px #B7B7B7;
-  box-shadow: inset 0px 1px 0px #E8E8E8, inset 15px 0px 25px #B7B7B7, inset -15px 0px 25px #B7B7B7, inset 0px -15px 25px #B7B7B7;
+  -webkit-box-shadow: inset 0px 1px 0px #E8E8E8, inset 3px 0px 13px #B7B7B7, inset -3px 0px 13px #B7B7B7, inset 0px -3px 13px #B7B7B7;
+  -moz-box-shadow: inset 0px 1px 0px #E8E8E8, inset 3px 0px 13px #B7B7B7, inset -3px 0px 13px #B7B7B7, inset 0px -3px 13px #B7B7B7;
+  -o-box-shadow: inset 0px 1px 0px #E8E8E8, inset 3px 0px 13px #B7B7B7, inset -3px 0px 13px #B7B7B7, inset 0px -3px 13px #B7B7B7;
+  box-shadow: inset 0px 1px 0px #E8E8E8, inset 3px 0px 13px #B7B7B7, inset -3px 0px 13px #B7B7B7, inset 0px -3px 13px #B7B7B7;
 }
