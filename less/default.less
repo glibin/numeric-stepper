@@ -60,6 +60,11 @@
             box-shadow: @x @y @blur @color;
 }
 
+.text-shadow (@h, @v, @blur, @color) {
+    text-shadow: @h @v @blur @color;
+    filter: dropshadow(color=@color, offx=@h, offy=@v);
+}
+
 .gradient (@from, @to) {
     background: -webkit-gradient(linear, 0 0, 0 100%, from(@from), to(@to));
     background: -moz-linear-gradient(top, @from, @to);
@@ -76,6 +81,12 @@
     .gradient(@buttonBgColorStart, @buttonBgColorEnd);
 
     .box-shadow-full(~"inset 0px 1px 0px #FBA078");
+    .text-shadow(0px, -1px, 0px, #b34300);
+}
+
+.numeric-stepper__button:active {
+    .gradient(@buttonBgColorEnd, @buttonBgColorEnd);
+    .box-shadow-full(~"none");
 }
 
 .numeric-stepper {
@@ -115,5 +126,7 @@
     margin-left: @buttonWidth;
     margin-right: @buttonWidth;
 
-    .box-shadow-full(~"inset 0px 1px 0px #E8E8E8, inset 15px 0px 25px #B7B7B7, inset -15px 0px 25px #B7B7B7, inset 0px -15px 25px #B7B7B7");
+    font-size: 35px;
+
+    .box-shadow-full(~"inset 0px 1px 0px #E8E8E8, inset 3px 0px 13px #B7B7B7, inset -3px 0px 13px #B7B7B7, inset 0px -3px 13px #B7B7B7");
 }
