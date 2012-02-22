@@ -20,7 +20,7 @@
         var context = this;
 
         $el.addClass('numeric-stepper');
-        $el.html('<a class="numeric-stepper__left" href="javascript: void(0);">-</a>' +
+        $el.html('<a class="numeric-stepper__left" href="javascript: void(0);">&minus;</a>' +
             '<a class="numeric-stepper__right" href="javascript: void(0);">+</a>' +
             '<div class="numeric-stepper__body">573</div>');
 
